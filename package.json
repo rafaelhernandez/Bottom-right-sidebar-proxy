@@ -5,24 +5,26 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server/server.js",
+    "start:dev": "nodemon server/server.js",
+    "debug": "node --inspect server/server.js",
+    "start:aws": "DATABASE_HOST=54.193.92.154 PORT=3000 node server/server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/codenamesgroup/jornelas-proxy.git"
+    "url": "git+https://github.com/rafaelhernandez/Bottom-right-sidebar-proxy.git"
   },
-  "author": "john ornelas",
+  "author": "Rafael Hernandez",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/codenamesgroup/jornelas-proxy/issues"
+    "url": "https://github.com/rafaelhernandez/Bottom-right-sidebar-proxy/issues"
   },
-  "homepage": "https://github.com/codenamesgroup/jornelas-proxy#readme",
+  "homepage": "https://github.com/rafaelhernandez/Bottom-right-sidebar-proxy#readme",
   "dependencies": {
+    "axios": "^0.18.0",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-http-proxy": "^1.1.0",
-    "jquery": "^3.3.1",
-    "morgan": "^1.9.0",
-    "request": "^2.83.0"
+    "path": "^0.12.7"
   }
 }
