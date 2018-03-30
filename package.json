@@ -6,9 +6,9 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server/server.js",
+    "start:aws": "SIDEBAR_SERVICE_HOST=sidebar-LB-8110f10f015f114c.elb.us-west-1.amazonaws.com SIDEBAR_SERVICE_PORT=80 node server/server.js",
     "start:dev": "nodemon server/server.js",
-    "debug": "node --inspect server/server.js",
-    "start:aws": "DATABASE_HOST=54.193.92.154 PORT=3000 node server/server.js"
+    "debug": "node --inspect server/server.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +26,7 @@
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "express-http-proxy": "^1.1.0",
+    "newrelic": "^3.3.0",
     "path": "^0.12.7",
     "redis": "^2.8.0"
   }
